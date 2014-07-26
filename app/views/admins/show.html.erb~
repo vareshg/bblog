@@ -1,0 +1,3 @@
+<p> hi show PAGE</p>
+<p><%= @admin.name  %></p>
+<p><%= @admin.email %></p>

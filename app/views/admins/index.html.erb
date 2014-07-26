@@ -1,0 +1,9 @@
+<p> <%= @admin.inspect %>index  page </p>
+
+<br>
+
+<% @admin.each do |a| %>
+<%= a.name %>      
+<%= a.email %>
+<br>
+<% end %>
