@@ -12,4 +12,7 @@
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path %>  |
+<%= link_to 'Manage Profile', new_or_edit_profile_path(@user.profile) %>
+<%= @user.inspect %>
+

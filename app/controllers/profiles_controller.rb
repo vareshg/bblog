@@ -32,9 +32,23 @@ class ProfilesController < ApplicationController
     end
   end
 
+ def profile_edit
+@profile = Profile.find(params[:id])
+ respond_to do |format|
+      if @profile.blank?
+        format.html { reder action: 'edit' }
+        format.json { render json: @profile.errors, status: :edited }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @profile.errors, status: :unprocessable_entity }
+      end
+    end
+ end 
+ 
   # GET /profiles/1/edit
   def edit
-    @profile = Profile.find(params[:id])
+   @profile = Profile.find(params[:id])
+   
   end
 
   # POST /profiles
